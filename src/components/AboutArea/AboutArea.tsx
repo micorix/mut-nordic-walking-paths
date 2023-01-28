@@ -3,13 +3,16 @@ import radiostacjaImg from "../../assets/img/radiostacja.png";
 import { Link } from "react-router-dom";
 import { FiArrowLeft } from "@react-icons/all-files/fi/FiArrowLeft";
 
+// dirty little hacks
+const ArrowLeftIcon = FiArrowLeft as any
+
 const AboutArea = () => (
   <div className="mt-5 px-5 md:px-0 md:w-1/2 mx-auto pb-10">
     <Link
       to="/"
       className="mb-8 flex hover:-translate-x-1 transform transition"
     >
-      <FiArrowLeft className="text-2xl mr-2" />
+      <ArrowLeftIcon className="text-2xl mr-2" />
       <span className="">Powróć do listy</span>
     </Link>
     <h1 className="text-2xl font-bold">Ciekawe miejsca</h1>

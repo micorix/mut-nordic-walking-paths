@@ -3,10 +3,10 @@ import "leaflet-easyprint";
 import { useEffect } from "preact/compat";
 import { useMap } from "react-leaflet";
 
-function MapPrint(props) {
+const MapPrint = (props: any) => {
   const map = useMap();
   useEffect(() => {
-    const control = L.easyPrint({
+    const control = (L as any).easyPrint({
       ...props,
     });
     map.addControl(control);

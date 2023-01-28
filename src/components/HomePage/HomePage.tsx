@@ -1,7 +1,8 @@
 import tracks from "../../content/tracks";
 import { Link } from "react-router-dom";
+import {FC} from "preact/compat";
 
-const TrackCard = ({ track, i }) => (
+const TrackCard: FC<{track: any, i: number}> = ({ track, i }) => (
   <Link to={`/track/${track.slug}`} className="flex mt-5 w-full">
     <div className="flex items-center mr-5">
       <span className="block rounded-full w-10 h-10 text-lg flex items-center justify-center border-blue-500 border-2">

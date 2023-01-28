@@ -1,12 +1,12 @@
 import { GeoJSON, MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { useEffect, useRef } from "preact/compat";
+import {FC, useEffect, useRef} from "preact/compat";
 import MapPrint from "./MapPrint";
 
 const center = [52.2573, 20.8824];
 
-const Map = ({ geoJSON }) => {
+const Map: FC<{geoJSON: L.GeoJSON}> = ({ geoJSON }) => {
   const mapRef = useRef<L.Map>();
   const geoJSONRef = useRef<L.GeoJSON>();
 

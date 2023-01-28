@@ -5,6 +5,12 @@ import { SiGooglemaps } from "@react-icons/all-files/si/SiGooglemaps";
 import { FiPrinter } from "@react-icons/all-files/fi/FiPrinter";
 import { FiDownload } from "@react-icons/all-files/fi/FiDownload";
 import { FiArrowLeft } from "@react-icons/all-files/fi/FiArrowLeft";
+import React from "preact/compat";
+
+// dirty little hacks
+const ArrowLeftIcon = FiArrowLeft as any
+const GoogleMapsIcon = SiGooglemaps as any
+const DownloadIcon = FiDownload as any
 
 const ErrorPage = () => {
   return (
@@ -32,7 +38,7 @@ const TrackPage = () => {
           to="/"
           className="mb-8 flex hover:-translate-x-1 transform transition"
         >
-          <FiArrowLeft className="text-2xl mr-2" />
+          <ArrowLeftIcon className="text-2xl mr-2" />
           <span className="">Powróć do listy</span>
         </Link>
         <h1 className="text-2xl font-bold">{track.name}</h1>
@@ -72,7 +78,7 @@ const TrackPage = () => {
             href="https://www.google.com/maps/d/u/0/edit?mid=1TgATGkBPSeZdKsqj5QLw0qxiUjXERB4&usp=sharing"
             class="flex items-center text-center px-5 py-2 border-2 border-blue-300 rounded"
           >
-            <SiGooglemaps className="w-5 mr-5" />
+            <GoogleMapsIcon className="w-5 mr-5" />
             <span className="block w-full text-center">
               Zobacz trasę w Google Maps
             </span>
@@ -82,13 +88,13 @@ const TrackPage = () => {
             download=""
             className="mt-5 items-center flex text-center px-5 py-2 border-2 border-blue-300 rounded"
           >
-            <FiDownload className="w-5 mr-5" />
+            <DownloadIcon className="w-5 mr-5" />
             <span className="block w-full text-center">Pobierz plik GPX</span>
           </a>
         </div>
       </div>
       <div className="col-span-4 h-96 lg:h-full">
-        <Map geoJSON={track.geoJSON} />
+        <Map geoJSON={track.geoJSON as unknown as L.GeoJSON} />
       </div>
     </div>
   );

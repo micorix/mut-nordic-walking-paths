@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
+import {FC} from "preact/compat";
 
-const Layout = ({ children }) => {
+const Layout: FC = ({ children }) => {
   return (
     <>
       <Navbar />
