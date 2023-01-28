@@ -1,11 +1,10 @@
 import Routes from "./Routes";
 import Layout from "./Layout";
 
-
 const App = () => (
-    <Layout>
-        <Routes />
-    </Layout>
-)
+  <Layout>
+    <Routes />
+  </Layout>
+);
 
-export default App
+export default App;

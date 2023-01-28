@@ -1,23 +1,21 @@
-import L from 'leaflet';
-import 'leaflet-easyprint';
-import { useEffect } from 'preact/compat';
-import { useMap } from 'react-leaflet';
-
+import L from "leaflet";
+import "leaflet-easyprint";
+import { useEffect } from "preact/compat";
+import { useMap } from "react-leaflet";
 
 function MapPrint(props) {
-    const map = useMap();
-    useEffect(() => {
-        const control = L.easyPrint({
-            ...props
-        });
-        map.addControl(control)
-        return () => {
-            map.removeControl(control);
-        }
-    }, [map]);
+  const map = useMap();
+  useEffect(() => {
+    const control = L.easyPrint({
+      ...props,
+    });
+    map.addControl(control);
+    return () => {
+      map.removeControl(control);
+    };
+  }, [map]);
 
-
-    return null;
+  return null;
 }
 
-export default MapPrint
+export default MapPrint;

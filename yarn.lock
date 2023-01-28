@@ -1841,6 +1841,7 @@ __metadata:
     leaflet-easyprint: ^2.1.9
     postcss: ^8.4.21
     preact: ^10.11.3
+    prettier: ^2.8.3
     react-leaflet: ^4.2.0
     react-leaflet-easyprint: ^2.0.0
     react-router-dom: ^6.8.0
@@ -2077,6 +2078,15 @@ __metadata:
   version: 10.11.3
   resolution: "preact@npm:10.11.3"
   checksum: 9387115aa0581e8226309e6456e9856f17dfc0e3d3e63f774de80f3d462a882ba7c60914c05942cb51d51e23e120dcfe904b8d392d46f29ad15802941fe7a367
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.8.3":
+  version: 2.8.3
+  resolution: "prettier@npm:2.8.3"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 92f2ceb522d454370e02082aa74ad27388672f7cee8975028b59517c069fe643bdc73e322675c8faf2ff173d7a626d1a6389f26b474000308e793aa25fff46e5
   languageName: node
   linkType: hard
 
